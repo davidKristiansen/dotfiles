@@ -1,0 +1,22 @@
+set $mod Mod4
+set $left h
+set $down j
+set $up k
+set $right l
+set $term kitty
+set $menu exec $term --class=launcher -e sway-launcher-desktop
+set $lock $HOME/.local/bin/lock.sh
+
+
+include colorscheme
+include window_rules
+include startup_applications
+include input
+include output
+include functions
+include keybindings
+include bar
+include ux
+
+
+include /etc/sway/config.d/*

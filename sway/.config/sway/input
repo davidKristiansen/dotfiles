@@ -1,0 +1,15 @@
+
+input * {
+	xkb_layout "no"
+}
+
+input 1240:61139:Massdrop_Inc._ALT_Keyboard {
+    xkb_layout us
+    xkb_variant colemak
+}
+
+input type:touchpad {
+	tap enabled
+}
+
+

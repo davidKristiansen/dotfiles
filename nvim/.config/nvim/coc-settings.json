@@ -1,0 +1,14 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "rust",
+        "json",
+        "python",
+        "c",
+        "cpp",
+        "rust"
+    ],
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=cv2"
+    ],
+    "suggest.noselect": false
+}
