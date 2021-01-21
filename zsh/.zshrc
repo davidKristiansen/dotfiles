@@ -25,6 +25,8 @@ antigen bundle "MichaelAquilina/zsh-autoswitch-virtualenv"
 
 antigen bundle thewtex/tmux-mem-cpu-load
 
+antigen bundle "DarrinTisdale/zsh-aliases-exa"
+
 # Load the theme.
 antigen theme robbyrussell
 
@@ -70,7 +72,14 @@ if type rg &> /dev/null; then
 fi
 
 if type exa &> /dev/null; then
-    alias ls=exa
+    alias ls='exa'
+    alias l='exa -lbF --git'
+    alias ll='exa -lbGF --git'
+    alias llm='exa -lbGd --git --sort=modified'
+    alias la='exa -lbhga  --git --color-scale'
+    alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale'
+    alias lS='exa -1'
+    alias lt='exa --tree --level=2'
 fi
 
 if type bat &> /dev/null; then
