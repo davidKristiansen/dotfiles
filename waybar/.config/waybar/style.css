@@ -6,6 +6,53 @@
 *
 */
 
+
+@define-color dark0_hard #1d2021;
+@define-color dark0 #282828;
+@define-color dark0_soft #32302f;
+@define-color dark1 #3c3836;
+@define-color dark2 #504945;
+@define-color dark3 #665c54;
+@define-color dark4 #7c6f64;
+@define-color dark4_256 #7c6f64;
+
+@define-color gray_245 #928374;
+@define-color gray_244 #928374;
+
+@define-color light0_hard #f9f5d7;
+@define-color light0 #fbf1c7;
+@define-color light0_soft #f2e5bc;
+@define-color light1 #ebdbb2;
+@define-color light2 #d5c4a1;
+@define-color light3 #bdae93;
+@define-color light4 #a89984;
+@define-color light4_256 #a89984;
+
+@define-color bright_red #fb4934;
+@define-color bright_green #b8bb26;
+@define-color bright_yellow #fabd2f;
+@define-color bright_blue #83a598;
+@define-color bright_purple #d3869b;
+@define-color bright_aqua #8ec07c;
+@define-color bright_orange #fe8019;
+
+@define-color neutral_red #cc241d;
+@define-color neutral_green #98971a;
+@define-color neutral_yellow #d79921;
+@define-color neutral_blue #458588;
+@define-color neutral_purple #b16286;
+@define-color neutral_aqua #689d6a;
+@define-color neutral_orange #d65d0e;
+
+@define-color faded_red #9d0006;
+@define-color faded_green #79740e;
+@define-color faded_yellow #b57614;
+@define-color faded_blue #076678;
+@define-color faded_purple #8f3f71;
+@define-color faded_aqua #427b58;
+@define-color faded_orange #af3a03;
+
+
 @define-color base00 #1d2021;
 @define-color base01 #cc241d;
 @define-color base02 #98971a;
@@ -32,38 +79,40 @@ window#waybar {
     font-family: Operator Mono Book;
     font-size: 12px;
     color: @base0F;
-    background:  @base00;
+    background:  @dark0_hard;
 }
  
 #workspaces button {
     color: @base0F;
     padding: 0 3px;
     min-width: 0;
-    background: transparent;
-    border-bottom: 3px solid transparent;
+    background: @dark1;
+    /* border-bottom: 3px solid transparent; */
 }
  
 #workspaces button.visible {
-    color: @base0F;
-    background: @base08;
-    border-bottom: 3px solid transparent;
+    color: @neutral_orange;
+    background: @dark1;
+    /* border-bottom: 3px solid transparent; */
 }
  
 #workspaces button.focused {
-    color: @base00;
-    background: @base07;
+    color: @bright_orange;
+    background: @dark1;
     /* border-bottom: 3px solid @base02; */
 }
  
 #clock {
     font-family: Operator Mono Bold;
     padding-right: 5px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #custom-spotify {
     padding-left: 10px;
     padding-right: 10px;
+    color: @light0_hard;
+    background: @dark4;
 }
 
  
@@ -77,11 +126,31 @@ window#waybar {
     border-right: none;
 }
  
-#mode {
-    /* padding: 0 10px 0 10px; */
-    background: @base00;
+#tray {
+    background: @dark1;
 }
 
+#cpu {
+    background: @dark2;
+}
+
+#memory {
+    background: @dark2;
+    padding-right: 5px;
+}
+
+#mode {
+    padding: 0 10px 0 10px;
+    background: @transparent;
+}
+
+#backlight {
+    background: @dark3;
+}
+
+#battery {
+    background: @dark3;
+}
 /* @keyframes blink { */
 /*     to { */
 /*         background-color: $base01; */
@@ -98,3 +167,44 @@ window#waybar {
 /*     animation-iteration-count: infinite; */
 /*     animation-direction: alternate; */
 /* } */
+
+#custom-arrow1 {
+	font-size: 24px;
+	color: @dark1;
+	background: @dark2;
+}
+#custom-arrow2 {
+	font-size: 24px;
+	color: @dark2;
+	background: @dark3;
+}
+#custom-arrow3 {
+	font-size: 24px;
+	background: #4e4e4e;
+	color: #949494
+}
+#custom-arrow4 {
+	font-size: 24px;
+	color: #4e4e4e;
+	background: #3a3a3a
+}
+#custom-arrow5 {
+	font-size: 24px;
+	color: #3a3a3a;
+	background: transparent;
+}
+#custom-arrow6 {
+	font-size: 24px;
+	color: @dark1;
+	background: @dark4;
+}
+#custom-arrow7 {
+	font-size: 24px;
+	color: @dark4;
+	background: transparent;
+}
+#custom-arrow8 {
+	font-size: 24px;
+	color: @bright_orange;
+	background: transparent;
+}

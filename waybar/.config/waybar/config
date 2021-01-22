@@ -1,19 +1,27 @@
 {
     "layer": "top",
+     "height": 24,
     "modules-left": [
         "sway/workspaces", 
+        "custom/arrow6",
         "custom/spotify",
-        "sway/mode"
+        "custom/arrow7",
+        "sway/mode",
+        "custom/arrow8"
     ],
     "modules-center": [
         "clock"
     ],
     "modules-right": [
-        "backlight",
         "network",
         "pulseaudio", 
+        "custom/arrow3",
+        "backlight",
         "battery", 
+        "custom/arrow2",
         "cpu",
+        "memory",
+        "custom/arrow1",
         "tray"
     ],
     "idle_inhibitor": {
@@ -26,8 +34,14 @@
     "cpu": {
         "interval": 10,
         "format": "{}% ",
-        "max-length": 10
+        "max-length": 10,
+	    "on-click": "kitty -e htop"
     },
+    "memory": {
+        "format": "{}% ",
+	    "on-click": "kitty -e htop"
+    },
+
     "sway/window": {
         "max-length": 50
     },
@@ -84,7 +98,36 @@
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
         "on-click": "kitty --class='termfloat' -e nmtui"
-}
+    },
+	"custom/arrow1": {
+		"format": ""
+	},
+	"custom/arrow3": {
+		"format": ""
+	},
+	"custom/arrow0": {
+		"format": ""
+	},
+	"custom/arrow4": {
+		"format": ""
+	},
+	"custom/arrow5": {
+		"format": ""
+	},
+	"custom/arrow6": {
+		"format": ""
+	},
+	"custom/arrow7": {
+		"format": ""
+	},
+	"custom/arrow8": {
+		"format": "",
+        "exec-if": "pgrep spotify"
+	},
+    "custom/arrow2": {
+		"format": ""
+	}
+
 }
 
 # vim: set syntax=json:
