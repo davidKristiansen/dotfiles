@@ -97,7 +97,8 @@
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty --class='termfloat' -e nmtui"
+        "on-click": "kitty -e nmtui"
+        // "on-click": "kitty --class='termfloat' -e nmtui"
     },
 	"custom/arrow1": {
 		"format": ""
