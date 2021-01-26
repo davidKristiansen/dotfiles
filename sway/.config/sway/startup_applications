@@ -8,7 +8,9 @@ exec ydotoold
 
 exec kdeconnect-indicator
 
-exec kanshi
+exec_always pkill kanshi; exec kanshi
+
+exec foot --server
 
 exec swayidle -w \
     timeout 120 '$lock --fade-in 5 --grace 10' \
