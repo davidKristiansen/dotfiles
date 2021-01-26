@@ -1,5 +1,7 @@
 source /usr/share/zsh/share/antigen.zsh
 
+export DEFAULT_USER=david
+
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -28,7 +30,7 @@ antigen bundle thewtex/tmux-mem-cpu-load
 antigen bundle "DarrinTisdale/zsh-aliases-exa"
 
 # Load the theme.
-antigen theme robbyrussell
+antigen theme agnoster
 
 
 # Tell Antigen that you're done.
