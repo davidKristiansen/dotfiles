@@ -4,7 +4,15 @@ set $down j
 set $up k
 set $right l
 set $term kitty
-set $menu exec kitty --class=launcher -e sway-launcher-desktop
+#set $menu exec kitty --class=launcher -e sway-launcher-desktop
+set $menu j4-dmenu-desktop --dmenu="bemenu -i \
+        --tb '#1D2021' \
+        --tf '#EBDBB2' \
+        --hb '#1D2021' \
+        --hf '#FE8019' \
+        --fb '#1D2021' \
+        --nb '#1D2021'" \
+        --term='kitty'
 set $lock $HOME/.local/bin/lock.sh
 
 

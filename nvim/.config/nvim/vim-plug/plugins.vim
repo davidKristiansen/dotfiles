@@ -15,20 +15,23 @@ else
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
     
     " File explorer
-    Plug 'preservim/nerdtree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'ryanoasis/vim-devicons'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-    Plug 'scrooloose/nerdtree-project-plugin'
-    Plug 'PhilRunninger/nerdtree-buffer-ops'
+    " Plug 'preservim/nerdtree'
+    " Plug 'Xuyuanp/nerdtree-git-plugin'
+    " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    " Plug 'scrooloose/nerdtree-project-plugin'
+    " Plug 'PhilRunninger/nerdtree-buffer-ops'
+
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
     Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'ryanoasis/vim-devicons'
 
     " Coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
     " Comments
-    Plug 'tpope/vim-commentary'
+    Plug 'b3nj5m1n/kommentary'
+    " Plug 'tpope/vim-commentary'
 
     " Snippets
     Plug 'SirVer/ultisnips'
@@ -63,6 +66,11 @@ else
     Plug 'cdelledonne/vim-cmake'
 
     Plug 'junegunn/vim-peekaboo'
+
+    Plug 'mhinz/vim-startify'
+
+    Plug 'vimwiki/vimwiki'
+
     endif
 
 

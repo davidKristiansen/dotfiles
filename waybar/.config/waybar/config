@@ -1,13 +1,10 @@
 {
-    "layer": "top",
-     "height": 24,
+    "layer": "bottom",
+     "height": 18,
     "modules-left": [
         "sway/workspaces", 
-        "custom/arrow6",
         "custom/spotify",
-        "custom/arrow7",
-        "sway/mode",
-        "custom/arrow8"
+        "sway/mode"
     ],
     "modules-center": [
         "clock"
@@ -15,15 +12,17 @@
     "modules-right": [
         "network",
         "pulseaudio", 
-        "custom/arrow3",
         "backlight",
         "battery", 
-        "custom/arrow2",
         "cpu",
         "memory",
-        "custom/arrow1",
         "tray"
     ],
+    "sway/workspaces": {
+        "persitant_workspaces": {
+            "9": ["DP-5"]
+        }
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -97,7 +96,7 @@
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
-        "on-click": "kitty -e nmtui"
+        "on-click": "$HOME/.local/bin/wifi-menu.sh 2>/dev/null"
         // "on-click": "kitty --class='termfloat' -e nmtui"
     },
 	"custom/arrow1": {

@@ -7,3 +7,9 @@ profile {
     output "Acer Technologies ED347CKR 0x00000000" position 0,0 mode 3440x1440 scale 1
     output "Acer Technologies H277HK T6WEE0092430" position 3440,0 mode 3840x2160 scale 2 transform 270
 }
+
+profile {
+    output "Sharp Corporation 0x14D0 0x00000000" disable
+    output "Acer Technologies ED347CKR 0x00003617" position 0,0 mode 3440x1440 scale 1
+    output "Acer Technologies H277HK T6WEE0092430" position 3440,0 mode 3840x2160 scale 2 transform 270
+}

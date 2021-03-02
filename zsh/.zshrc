@@ -1,6 +1,13 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 source /usr/share/zsh/share/antigen.zsh
 
-export DEFAULT_USER=david
+antigen theme romkatv/powerlevel10k
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -22,22 +29,25 @@ antigen bundle zsh-interactive-cd
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-
+# antigen bundle zsh-users/zsh-completion
 antigen bundle "MichaelAquilina/zsh-autoswitch-virtualenv"
 
-antigen bundle thewtex/tmux-mem-cpu-load
+# antigen bundle thewtex/tmux-mem-cpu-load
 
-antigen bundle "DarrinTisdale/zsh-aliases-exa"
+# antigen bundle "DarrinTisdale/zsh-aliases-exa"
+
+# antigen bundle "alichtman/zsh-startify"
 
 # Load the theme.
-antigen theme agnoster
+# antigen theme agnoster
 
 
 # Tell Antigen that you're done.
 antigen apply
 
-# VTE terminal fix
-# https://gnunn1.github.io/tilix-web/manual/vteconfig/
+#export DEFAULT_USER=david
+## VTE terminal fix
+## https://gnunn1.github.io/tilix-web/manual/vteconfig/
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
@@ -61,9 +71,11 @@ export EDITOR="$VISUAL"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$PATH:$HOME/.local/bin
+export GOPATH=$HOME/.go
 
-#determines search program for fzf
+export PATH=$PATH:$HOME/.local/bin:$GOROOT/bin
+
+##determines search program for fzf
 if type ag &> /dev/null; then
     export FZF_DEFAULT_COMMAND='ag -p ~/.gitignore -g ""'
 fi
@@ -92,10 +104,9 @@ fi
 # Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
 export KEYTIMEOUT=1
 
-
 function list_all() {
   emulate -L zsh
-  ls -l
+  exa -lbhga --git --color-scale
 }
 chpwd_functions=(${chpwd_functions[@]} "list_all")
 
@@ -112,8 +123,6 @@ function _set_cursor() {
     fi
 }
 
-# Remove mode switching delay.
-KEYTIMEOUT=5
 
 function _set_block_cursor() { _set_cursor '\e[2 q' }
 function _set_beam_cursor() { _set_cursor '\e[5 q' }
@@ -144,3 +153,8 @@ _toggl() {
 if [[ "$(basename -- ${(%):-%x})" != "_toggl" ]]; then
   compdef _toggl toggl
 fi
+# zsh-startify
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

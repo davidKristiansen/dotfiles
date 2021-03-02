@@ -86,19 +86,19 @@ window#waybar {
     color: @base0F;
     padding: 0 3px;
     min-width: 0;
-    background: @dark1;
+    background: @dark0_hard;
     /* border-bottom: 3px solid transparent; */
 }
  
 #workspaces button.visible {
     color: @neutral_orange;
-    background: @dark1;
+    background: @dark0_hard;
     /* border-bottom: 3px solid transparent; */
 }
  
 #workspaces button.focused {
     color: @bright_orange;
-    background: @dark1;
+    background: @dark0_hard;
     /* border-bottom: 3px solid @base02; */
 }
  
@@ -127,15 +127,15 @@ window#waybar {
 }
  
 #tray {
-    background: @dark1;
+    background: @dark0_hard;
 }
 
 #cpu {
-    background: @dark2;
+    background: @dark0_hard;
 }
 
 #memory {
-    background: @dark2;
+    background: @dark0_hard;
     padding-right: 5px;
 }
 
@@ -145,11 +145,11 @@ window#waybar {
 }
 
 #backlight {
-    background: @dark3;
+    background: @dark0_hard;
 }
 
 #battery {
-    background: @dark3;
+    background: @dark0_hard;
 }
 /* @keyframes blink { */
 /*     to { */
@@ -169,42 +169,42 @@ window#waybar {
 /* } */
 
 #custom-arrow1 {
-	font-size: 24px;
+	font-size: 18px;
 	color: @dark1;
 	background: @dark2;
 }
 #custom-arrow2 {
-	font-size: 24px;
+	font-size: 18px;
 	color: @dark2;
 	background: @dark3;
 }
 #custom-arrow3 {
-	font-size: 24px;
+	font-size: 18px;
 	background: #4e4e4e;
 	color: #949494
 }
 #custom-arrow4 {
-	font-size: 24px;
+	font-size: 18px;
 	color: #4e4e4e;
 	background: #3a3a3a
 }
 #custom-arrow5 {
-	font-size: 24px;
+	font-size: 18px;
 	color: #3a3a3a;
 	background: transparent;
 }
 #custom-arrow6 {
-	font-size: 24px;
+	font-size: 18px;
 	color: @dark1;
 	background: @dark4;
 }
 #custom-arrow7 {
-	font-size: 24px;
+	font-size: 18px;
 	color: @dark4;
 	background: transparent;
 }
 #custom-arrow8 {
-	font-size: 24px;
+	font-size: 18px;
 	color: @bright_orange;
 	background: transparent;
 }

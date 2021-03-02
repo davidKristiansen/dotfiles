@@ -77,3 +77,6 @@ set viminfo+=!
 set noshowmode
 set splitright
 set splitbelow
+
+" Auto remove trailing whitespaces
+autocmd BufWritePre *.py :%s/\s\+$//e
